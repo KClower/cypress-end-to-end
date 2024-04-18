@@ -103,6 +103,7 @@ export default function Form() {
           name='name'
           value={formState.name}
           onChange={inputChange}
+         
         />
         {errors.name.length > 0 ? <p className='error'>{errors.name}</p> : null}
       </label>
@@ -149,7 +150,7 @@ export default function Form() {
       </label>
       {/* displaying our post request data */}
       <pre>{JSON.stringify(post, null, 2)}</pre>
-      <button disabled={buttonDisabled}>Submit</button>
+      <button data-cy="submit-btn" disabled={buttonDisabled}>Submit</button>
     </form>
   );
 }
